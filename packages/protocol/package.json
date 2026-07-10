@@ -1,0 +1,24 @@
+{
+  "name": "@ai-game-jam/protocol",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target browser --packages external",
+    "check-types": "bunx tsc --noEmit -p tsconfig.json",
+    "test": "bun test ./src"
+  },
+  "dependencies": {
+    "@colyseus/schema": "4.0.27"
+  }
+}

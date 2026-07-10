@@ -1,0 +1,19 @@
+{
+  "name": "@ai-game-jam/server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun --packages external",
+    "check-types": "bunx tsc --noEmit -p tsconfig.json",
+    "dev": "bun --hot ./src/index.ts",
+    "start": "bun ./dist/index.js",
+    "test": "bun test ./src"
+  },
+  "dependencies": {
+    "@ai-game-jam/db": "workspace:*",
+    "@ai-game-jam/protocol": "workspace:*",
+    "@colyseus/bun-websockets": "0.17.13",
+    "colyseus": "0.17.10"
+  }
+}

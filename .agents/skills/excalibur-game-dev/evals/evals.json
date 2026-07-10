@@ -1,0 +1,40 @@
+{
+  "skill_name": "excalibur-game-dev",
+  "evals": [
+    {
+      "id": "add-scene-based-feature",
+      "prompt": "Use the Excalibur game dev skill to add a collectible pickup feature to this repo's game client without moving multiplayer authority into React.",
+      "expected_output": "A plan or implementation that inspects packages/game and apps/web, keeps Excalibur code in packages/game, composes pickups through a scene or game-owned actor flow, uses gameplay-sized colliders, preserves mount/dispose cleanup, and uses Bun verification commands."
+    },
+    {
+      "id": "debug-invisible-actor",
+      "prompt": "An Excalibur actor was created but does not appear on the canvas. Use the Excalibur game dev skill to debug it.",
+      "expected_output": "A debugging response that checks active scene membership, engine start, visible graphics, dimensions, position, z/camera bounds, killed state, asset loading, and debug drawing before suggesting targeted fixes."
+    },
+    {
+      "id": "add-sprite-animation-audio",
+      "prompt": "Use the Excalibur game dev skill to add a spritesheet animation and a jump sound to the player.",
+      "expected_output": "A workflow that centralizes ImageSource and Sound resources, uses Resources as const and a Loader or scene preload, builds named animations from the spritesheet, switches animations by state without resetting every frame, handles browser audio unlock, and verifies with Bun type/build plus a browser smoke check."
+    },
+    {
+      "id": "physics-trigger-hitbox",
+      "prompt": "Use the Excalibur game dev skill to add a damage hitbox that is active only during an attack animation.",
+      "expected_output": "A design that separates the visual actor from hitbox or damage-box colliders, chooses event-only or appropriate collision types/groups, enables the hitbox only during the attack window, prevents duplicate hits, cleans up child actors or subscriptions, and recommends debug drawing verification."
+    },
+    {
+      "id": "actor-vs-ecs-decision",
+      "prompt": "Several actor types now need health, cooldowns, and temporary status effects. Use the Excalibur game dev skill to choose an implementation pattern.",
+      "expected_output": "A recommendation that compares actor methods, components, systems, timers, and pure helpers, chooses ECS components/systems when behavior spans many entities, keeps components data-oriented, and identifies focused tests for deterministic status or cooldown logic."
+    },
+    {
+      "id": "server-authoritative-rendering",
+      "prompt": "Use the Excalibur game dev skill to render server-authoritative Colyseus entity state smoothly in Excalibur without trusting client actor positions.",
+      "expected_output": "A plan or implementation that keeps server state authoritative, binds Colyseus callbacks in packages/game, maps stable ids to actors, sends input/intent at a bounded rate, optionally interpolates or predicts visually, reconciles to server state, and cleans callbacks, actors, timers, room connections, and engine disposal."
+    },
+    {
+      "id": "respect-game-design-anchors",
+      "prompt": "docs/game-design defines a fixed top-down arena, keyboard movement, dash feedback, and a minimal HUD. Use the Excalibur game dev skill to implement or plan the client side.",
+      "expected_output": "A plan or implementation that reads the relevant docs/game-design anchors first, preserves the fixed top-down arena and input/HUD decisions, keeps Excalibur code in packages/game, keeps React as host UI, maps dash feedback to actors/resources/HUD without making client actors authoritative, and uses Bun verification commands."
+    }
+  ]
+}

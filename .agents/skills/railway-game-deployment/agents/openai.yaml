@@ -1,0 +1,4 @@
+interface:
+  display_name: "Railway Game Deployment"
+  short_description: "Deploy this multiplayer game to Railway"
+  default_prompt: "Use $railway-game-deployment to prepare and verify a Railway deployment for this game."

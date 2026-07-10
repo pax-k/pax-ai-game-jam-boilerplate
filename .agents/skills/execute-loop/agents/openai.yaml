@@ -1,0 +1,4 @@
+interface:
+  display_name: "Execute Loop"
+  short_description: "Generate end-to-end sprint goal prompts"
+  default_prompt: "Use $execute-loop to generate a pursue-goal prompt for the current docs/sprints game sprint."

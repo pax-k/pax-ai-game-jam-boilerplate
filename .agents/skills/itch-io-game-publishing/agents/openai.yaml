@@ -1,0 +1,4 @@
+interface:
+  display_name: "itch.io Game Publishing"
+  short_description: "Publish the game client to itch.io"
+  default_prompt: "Use $itch-io-game-publishing to package and publish this game to itch.io."

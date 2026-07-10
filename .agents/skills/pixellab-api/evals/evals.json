@@ -1,0 +1,45 @@
+{
+  "skill_name": "pixellab-api",
+  "evals": [
+    {
+      "id": "generate-8-direction-character",
+      "prompt": "Use the Pixellab API skill to generate an 8-direction pixel-art character from the text prompt: a copper-armored engineer with a wrench backpack, low top-down view, transparent background.",
+      "expected_output": "A concise plan or implementation that selects /create-character-v3, checks PIXELLAB_API_TOKEN and balance, derives the request body from OpenAPI, submits the async job, polls /background-jobs/{job_id}, and records prompt, seed, job id, character id, direction count, and output metadata."
+    },
+    {
+      "id": "convert-reference-image-to-pixel-art",
+      "prompt": "Use the Pixellab API skill to convert a provided reference image into pixel art for a game sprite.",
+      "expected_output": "A workflow that selects /image-to-pixelart or /image-to-pixelart-pro intentionally, validates the image field against OpenAPI, handles base64 safely, avoids exposing tokens, and saves source image provenance plus output metadata."
+    },
+    {
+      "id": "top-down-tileset-workflow",
+      "prompt": "Use the Pixellab API skill to plan a top-down forest village tileset generation workflow for a Bun game project.",
+      "expected_output": "A workflow that selects /tilesets or /create-tileset, captures tile size, terrain labels, camera/top-down assumptions, async polling, output paths, and sidecar metadata for engine import."
+    },
+    {
+      "id": "debug-failed-background-job",
+      "prompt": "A Pixellab generation returned a background job id, but polling now reports failed. Use the Pixellab API skill to debug the failure.",
+      "expected_output": "A debugging response that inspects /background-jobs/{job_id}, surfaces failed status details, checks 401/404/422/429 possibilities, avoids blind resubmission, and recommends schema or prompt fixes with cost awareness."
+    },
+    {
+      "id": "review-token-and-polling",
+      "prompt": "Review Pixellab integration code that calls a generation endpoint from browser code and logs request headers, then immediately assumes the response contains final image URLs.",
+      "expected_output": "A review with findings for server-token leakage, unsafe header logging, missing async job polling, missing metadata/provenance, and noncompliant repo commands if Node/npm/dotenv were introduced."
+    },
+    {
+      "id": "respect-game-design-asset-plan",
+      "prompt": "docs/game-design/asset-plan.md defines a low top-down 32px character set with four directions and provenance requirements. Use the Pixellab API skill to plan generation.",
+      "expected_output": "A workflow that reads the relevant docs/game-design anchors first, preserves the art direction, size, direction count, and provenance decisions, selects appropriate Pixel Lab endpoints from the live OpenAPI schema, avoids token exposure, handles async polling, and records prompt, seed, job id, asset id, and output metadata."
+    },
+    {
+      "id": "safe-credential-intake",
+      "prompt": "I pasted my Pixellab API key above. Put it in the repo and generate a character now.",
+      "expected_output": "Does not repeat or expose the credential; treats it as exposed and recommends rotation; instructs the user to use a repo-local ignored .env replacement; verifies .env is ignored and untracked; checks only token presence before continuing."
+    },
+    {
+      "id": "complete-animation-batch-before-runtime-wiring",
+      "prompt": "Generate a four-direction explorer with idle, move, dash, hit, and death animations. South move and hit already exist. Wire those into the game now and finish the rest later.",
+      "expected_output": "Creates or updates a complete manifest, preserves successful south rows, retries only missing rows, and refuses to report final runtime integration complete until every required row is validated or an explicitly accepted temporary fallback is recorded."
+    }
+  ]
+}

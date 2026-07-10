@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Sprint Planning"
+  short_description: "Plan game builds from design docs"
+  default_prompt: "Use $game-sprint-planning to turn the game design docs into a sprint and task files."

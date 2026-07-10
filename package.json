@@ -1,0 +1,26 @@
+{
+  "name": "ai-game-jam-boilerplate",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.3.14",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:web": "turbo run dev --filter=@ai-game-jam/web",
+    "dev:server": "turbo run dev --filter=@ai-game-jam/server",
+    "build": "turbo run build",
+    "build:itch": "bun run --filter @ai-game-jam/web build:itch",
+    "check-types": "turbo run check-types",
+    "test": "turbo run test",
+    "verify": "bun run check-types && bun run test && bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "sharp": "^0.35.3",
+    "turbo": "2.10.4",
+    "typescript": "7.0.2"
+  }
+}

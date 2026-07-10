@@ -1,0 +1,25 @@
+{
+  "name": "@ai-game-jam/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bunx vite build",
+    "build:itch": "bunx vite build --base ./",
+    "check-types": "bunx tsc --noEmit -p tsconfig.json",
+    "dev": "bunx vite --host 0.0.0.0",
+    "start": "bunx vite preview --host 0.0.0.0 --port $PORT"
+  },
+  "dependencies": {
+    "@ai-game-jam/game": "workspace:*",
+    "@ai-game-jam/protocol": "workspace:*",
+    "@vitejs/plugin-react": "6.0.3",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "vite": "8.1.4"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3"
+  }
+}

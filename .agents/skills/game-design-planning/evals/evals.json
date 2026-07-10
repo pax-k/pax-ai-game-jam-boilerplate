@@ -1,0 +1,30 @@
+{
+  "skill_name": "game-design-planning",
+  "evals": [
+    {
+      "id": "vague-arena-game-to-docs",
+      "prompt": "Use the game design planning skill to turn this rough idea into repo-local planning docs: a multiplayer arena game where players fight over unstable energy cores.",
+      "expected_output": "A plan or implementation that inspects the repo and existing docs/game-design state, asks only blocking questions or labels assumptions, then creates or updates concise docs for vision, game form, core loops, MDA, mechanics, multiplayer ownership, client architecture, asset plan, prototype plan, and decision log without changing game code."
+    },
+    {
+      "id": "rpg-racing-coop-variant",
+      "prompt": "Use the game design planning skill to define a browser multiplayer co-op racing RPG prototype without overbuilding it.",
+      "expected_output": "A scoped game plan that identifies the primary genre loop, camera, session shape, player verbs, design pillars, non-goals, MVP mechanics, server-authoritative multiplayer needs, Excalibur client needs, Pixel Lab asset inventory, and prototype slices while cutting unrelated production-scale systems."
+    },
+    {
+      "id": "revise-after-design-pivot",
+      "prompt": "The existing docs/game-design plan changed from competitive arena combat to co-op extraction. Use the game design planning skill to revise the docs.",
+      "expected_output": "A revision workflow that reads existing planning docs first, preserves still-valid decisions, updates core loop, MDA, mechanics, multiplayer ownership, asset plan, prototype slices, and decision log, and records changed assumptions without implementing code."
+    },
+    {
+      "id": "pixellab-ready-assets-no-api-call",
+      "prompt": "Use the game design planning skill to prepare Pixel Lab-ready asset planning for a top-down swamp exploration game, but do not generate assets yet.",
+      "expected_output": "An asset-plan-focused output that defines visual direction, prompt base, asset inventory, sizes, direction counts, animation states, provenance fields, greybox-vs-generated timing, and references the Pixellab skill for later generation without making API calls."
+    },
+    {
+      "id": "mechanics-to-authority-and-rendering",
+      "prompt": "Use the game design planning skill to map dash, pickup, score, and hazard mechanics to Colyseus authority and Excalibur rendering responsibilities.",
+      "expected_output": "A mechanics and architecture plan that classifies each mechanic as client-only visual, client input/server result, shared schema, transient message, or persistent DB state, then maps the corresponding Excalibur actors, input, HUD, feedback, cleanup, and relevant verification commands."
+    }
+  ]
+}

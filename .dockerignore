@@ -1,0 +1,11 @@
+node_modules
+apps/*/node_modules
+packages/*/node_modules
+.git
+.env
+.turbo
+.playwright-cli
+apps/server/data
+apps/web/dist
+output
+release

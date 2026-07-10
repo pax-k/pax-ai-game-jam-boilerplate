@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Sprint Execution"
+  short_description: "Execute planned game sprint tasks"
+  default_prompt: "Use $game-sprint-execution to implement the next ready task from docs/sprints and update the task evidence."

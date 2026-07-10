@@ -1,0 +1,35 @@
+{
+  "skill_name": "colyseus-multiplayer-engineering",
+  "evals": [
+    {
+      "id": "review-current-architecture",
+      "prompt": "Use the Colyseus multiplayer engineering skill to review this repo's room/schema/client flow and suggest one concrete improvement.",
+      "expected_output": "A concise review that inspects the server room, protocol schema, and client SDK callback flow, then gives one actionable Colyseus-specific improvement with verification."
+    },
+    {
+      "id": "password-private-room-flow",
+      "prompt": "Add a password-protected private room flow to the current Colyseus game without changing public runtime APIs outside the necessary protocol/server/client surfaces.",
+      "expected_output": "A plan or implementation that uses filterBy/private room patterns, keeps secrets out of synced schema, handles failed joins on the client, and uses Bun verification commands."
+    },
+    {
+      "id": "reconnection-handling",
+      "prompt": "Add reconnection handling so temporary disconnects preserve player state, while permanent leaves clean it up.",
+      "expected_output": "A plan or implementation using onDrop, allowReconnection, onReconnect, and onLeave with explicit client-side drop/reconnect/leave handling and cleanup checks."
+    },
+    {
+      "id": "load-test-design",
+      "prompt": "Design a load test for 50 simulated clients joining the game room and sending movement input.",
+      "expected_output": "A Bun-native load-test plan using @colyseus/loadtest and @colyseus/sdk, including server startup, representative bot behavior, error logging, and pass/fail signals."
+    },
+    {
+      "id": "refactor-bloated-room",
+      "prompt": "A new feature made GameRoom large and full of game rules. Refactor the design while preserving Colyseus behavior.",
+      "expected_output": "A refactor plan that keeps the room thin, moves deterministic rules into pure helpers or commands, keeps schemas data-only, and identifies targeted unit and room tests."
+    },
+    {
+      "id": "respect-game-design-anchors",
+      "prompt": "docs/game-design now defines dash as client input with a server-authoritative result and score as shared schema state. Use the Colyseus multiplayer engineering skill to implement or plan the protocol/server side.",
+      "expected_output": "A plan or implementation that reads the relevant docs/game-design anchors first, preserves the stated ownership decisions, keeps dash as validated transient input with server-owned outcome, keeps score in shared schema state, and uses Bun verification commands."
+    }
+  ]
+}
