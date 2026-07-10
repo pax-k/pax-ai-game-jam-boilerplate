@@ -48,9 +48,27 @@ Fill in `docs/game-design/` before adding game rules, rendering, or assets. The 
 
 Keep generated art, provenance metadata, releases, browser captures, caches, and local databases out of Git unless a file is deliberately a reusable fixture. The generic Pixel Lab helpers in `scripts/pixellab/` sanitize metadata, validate required OpenAPI paths, and assemble a supplied frame set into an atlas; they never include credentials or generated assets.
 
+## Develop with the included skills
+
+This repository includes game-development skills under [`.agents/skills`](.agents/skills). Use them as the default path from an idea to a shipped game:
+
+1. Use `game-design-planning` to turn the idea into decisions in `docs/game-design/` before writing gameplay code.
+2. Use `game-sprint-planning` to turn those decisions into a bounded sprint under `docs/sprints/<game-slug>-v1/`.
+3. Use `game-sprint-execution` or `execute-loop` to work the ready tasks and retain verification evidence.
+4. Use the domain skill for the change at hand: `colyseus-multiplayer-engineering` for server authority and rooms, `excalibur-game-dev` for canvas and prediction, `frontend-design` for the lobby and HUD, and `pixellab-api` for credential-safe asset workflows.
+5. When you are ready to release, use `railway-game-deployment` and `itch-io-game-publishing`.
+
+Read the relevant `SKILL.md` before acting. The design documents are the planning authority; sprint tasks record execution state.
+
 ## Deploying
 
 Use [Railway](docs/deployment/railway.md) for a single-replica server plus web service, and [itch.io](docs/deployment/itch-io.md) for a static HTML5 client build. Both paths are opt-in: this template has no maintained public demo deployment.
+
+## Origin and reference implementation
+
+This boilerplate grew out of [Vadim Jam](https://github.com/pax-k/vadim-jam), the preserved complete game implementation. Use that repository to study a finished, game-specific application; keep new work here generic until you create a project from this template.
+
+It was created for the [original AI game-jam event](https://luma.com/tagpbosj).
 
 ## License
 
